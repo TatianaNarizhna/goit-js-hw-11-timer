@@ -1,16 +1,6 @@
 
-const refs = {
-    frontSide: document.querySelector('#timer-1'),
-    days: document.querySelector('[data-value="days"]'),
-    hours: document.querySelector('[data-value="hours"]'),
-    mins: document.querySelector('[data-value="mins"]'),
-    secs: document.querySelector('[data-value="secs"]'),
-}
-
-const TIME_INTERVAL = 1000;
-
 class CountdownTimer {
-
+    
     constructor({selector, targetDate} = {}) {
         this.timeId = null;
         this.selector = selector;
@@ -26,7 +16,7 @@ class CountdownTimer {
 
         if(difference < 0) {
             clearInterval(this.timeId);
-            refs.frontSide.textContent = "Поздравляем с началом учебного года!"
+            document.querySelector('#timer-1').textContent = "Поздравляем с началом учебного года!"
             return;
         };
     };
@@ -37,7 +27,7 @@ class CountdownTimer {
         this.timeId = setInterval(() => {
         this.createTime()
       
-       }, TIME_INTERVAL) 
+       }, 1000) 
     };
 
     pad(value) {
@@ -46,10 +36,10 @@ class CountdownTimer {
 
     clockFace({days, hours, mins, secs}) {
         // refs.frontSide.textContent = `${days}:${hours}:${mins}:${secs}`;
-        refs.days.textContent = `${days}`;
-        refs.hours.textContent = `${hours}`;
-        refs.mins.textContent = `${mins}`;
-        refs.secs.textContent = `${secs}`;
+        document.querySelector('[data-value="days"]').textContent = `${days}`;
+        document.querySelector('[data-value="hours"]').textContent = `${hours}`;
+        document.querySelector('[data-value="mins"]').textContent = `${mins}`;
+        document.querySelector('[data-value="secs"]').textContent = `${secs}`;
     }
 
     receiveTime(time) {   
