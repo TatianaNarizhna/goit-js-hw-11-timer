@@ -5,4 +5,4 @@ function e(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./code.js/timer");
 },{"./sass/main.scss":"clu1","./code.js/timer":"uky4"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-timer/src.37cb48f7.js.map
+//# sourceMappingURL=/goit-js-hw-11-timer/src.7b9f9383.js.map
